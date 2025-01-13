@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chip8",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Chip8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chip8-Debug-1b3fd7a7c8b73e7a4bb1.json",
+					"name" : "Chip8",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "chip8Def::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chip8Def-Debug-ba9665d9235c3ed5195f.json",
+					"name" : "chip8Def",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build",
+		"source" : "/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

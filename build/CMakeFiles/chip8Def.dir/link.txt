@@ -1,0 +1,1 @@
+/opt/homebrew/opt/ccache/libexec/c++ -g -arch arm64 -isysroot /Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libchip8Def.dylib -install_name @rpath/libchip8Def.dylib "CMakeFiles/chip8Def.dir/lib/chip-8.cpp.o"

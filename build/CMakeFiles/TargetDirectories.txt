@@ -1,0 +1,4 @@
+/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build/CMakeFiles/chip8Def.dir
+/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build/CMakeFiles/Chip8.dir
+/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build/CMakeFiles/edit_cache.dir
+/Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build/CMakeFiles/rebuild_cache.dir

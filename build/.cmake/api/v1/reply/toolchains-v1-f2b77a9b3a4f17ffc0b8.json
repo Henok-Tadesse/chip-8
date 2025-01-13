@@ -1,0 +1,93 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "AppleClang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/lib",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/lib/swift"
+					],
+					"linkFrameworkDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks"
+					],
+					"linkLibraries" : []
+				},
+				"path" : "/opt/homebrew/opt/ccache/libexec/cc",
+				"version" : "15.0.0.15000309"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "AppleClang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/lib",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/lib/swift"
+					],
+					"linkFrameworkDirectories" : 
+					[
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks"
+					],
+					"linkLibraries" : 
+					[
+						"c++"
+					]
+				},
+				"path" : "/opt/homebrew/opt/ccache/libexec/c++",
+				"version" : "15.0.0.15000309"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
