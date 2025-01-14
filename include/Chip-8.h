@@ -1,6 +1,7 @@
 #pragma once
 
 #include <filesystem>
+#include <vector>
 
 class Chip8 {
 
@@ -21,9 +22,13 @@ public:
 
   void fillDisplaybuffer(int, int, int);
 
+  void fakeDisplay();
+
   void decode();
 
   int program_size = 0;
+
+  bool drawFlag;
 
 private:
   unsigned char memory[4096];
@@ -31,11 +36,11 @@ private:
   unsigned char V[16];
   unsigned short I;
   unsigned short pc;
-  unsigned char gfx[64][32];
+  unsigned char gfx[64 * 32]; // x,y
   unsigned char delay_timer;
   unsigned char sound_timer;
   unsigned short stack[16];
   unsigned short sp;
   unsigned char key[16];
-  bool drawFlag;
+  std::vector<char> gfx_values;
 };

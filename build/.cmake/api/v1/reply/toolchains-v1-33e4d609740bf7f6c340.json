@@ -10,9 +10,8 @@
 				{
 					"includeDirectories" : 
 					[
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include",
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+						"/usr/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include"
 					],
 					"linkDirectories" : 
 					[
@@ -43,10 +42,8 @@
 				{
 					"includeDirectories" : 
 					[
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include/c++/v1",
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include",
-						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+						"/usr/include",
+						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/usr/include"
 					],
 					"linkDirectories" : 
 					[
@@ -57,10 +54,7 @@
 					[
 						"/Users/henok.tadesse.meta/Desktop/Xcode_15.3/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks"
 					],
-					"linkLibraries" : 
-					[
-						"c++"
-					]
+					"linkLibraries" : []
 				},
 				"path" : "/opt/homebrew/opt/ccache/libexec/c++",
 				"version" : "15.0.0.15000309"

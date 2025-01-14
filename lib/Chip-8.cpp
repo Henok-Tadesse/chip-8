@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <string.h>
 #include <vector>
 
 using namespace std;
@@ -66,16 +67,44 @@ Chip8::opcode_t Chip8::fetch() {
   return opcode;
 };
 
-void Chip8::clearDisplay() {
-  for (int i = 0; i < 64; i++) {
-    for (int j = 0; j < 31; j++) {
-      gfx[i][j] = 0;
-    }
+void Chip8::clearDisplay() { gfx_values.resize(2048, '0'); }
+
+string hexToBinary(unsigned char hex) {
+  string binary = "";
+  for (int i = 7; i >= 0; --i) {
+    binary += ((hex & (1 << i)) ? '1' : '0');
   }
+  return binary;
 }
 
+void Chip8::fakeDisplay() {
+  for (int j = 0; j < 32; j++) {
+    for (int i = 0; i < 64; ++i) {
+      std::cout << gfx_values[(j * 64) + i];
+    }
+    printf("\n");
+  }
+
+  drawFlag = false;
+};
+
 void Chip8::fillDisplaybuffer(int x, int y, int n) {
+
+  // init it with a bunch of zeros.
+  // parse 8 chars
+
   printf("x: %d , y: %d, n: %d\n", x, y, n);
+  printf("Vx: %d  | Vy: %d \n", V[x], V[y]);
+  printf("value is: %02X\n", memory[I]);
+  // gfx[V[x]][V[y]] = 0xFF;
+  for (int i = 0; i < n; i++) {
+    // gfx[V[x]][V[y] + i] = memory[I + i];
+    gfx[(V[x] * V[y]) + (i * 64)] = memory[I + i];
+    for (int k = 0; k < 7; k++) {
+      gfx_values[(V[x] + (64 * V[y])) + (i * 64) + k] =
+          hexToBinary(memory[I + i])[k];
+    }
+  }
 };
 
 void Chip8::decode() {
@@ -96,10 +125,18 @@ void Chip8::decode() {
     // jump to memory [I] and read values
     // the writing to buffer starts at x,y => gpx[64][32]
     printf("code: %d\n",
-           (opcode &
-            0x000F)); // cause we are casting it to int, it takes care of itself
+           (opcode & 0x000F)); // cause we are casting it to int, it
+                               // takes care of itself
     fillDisplaybuffer((opcode & 0x0F00), (opcode & 0x00F0) >> 4,
                       (opcode & 0x000F));
+    drawFlag = true;
+    pc = pc + 2;
+    break;
+  case 0x7000:
+    printf("Set Vx = Vx + kk\n");
+    V[(opcode & 0x0F00) >> 8] = (opcode & 0x00FF) + V[(opcode & 0x0F00) >> 8];
+
+    pc = pc + 2;
     break;
   case 0x0000:
     switch (opcode & 0x000F) {
