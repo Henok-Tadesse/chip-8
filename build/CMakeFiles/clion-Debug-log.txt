@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -S /Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13 -B /Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/henok.tadesse.meta/Desktop/ch8/Chip-8-final-Jan-13/build

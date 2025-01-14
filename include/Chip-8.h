@@ -1,5 +1,6 @@
 #pragma once
 
+#include "SDL2/SDL.h"
 #include <filesystem>
 #include <vector>
 
@@ -22,13 +23,15 @@ public:
 
   void fillDisplaybuffer(int, int, int);
 
-  void fakeDisplay();
+  std::vector<char> fakeDisplay();
 
   void decode();
 
   int program_size = 0;
 
   bool drawFlag;
+
+  std::vector<char> gfx_values;
 
 private:
   unsigned char memory[4096];
@@ -42,5 +45,4 @@ private:
   unsigned short stack[16];
   unsigned short sp;
   unsigned char key[16];
-  std::vector<char> gfx_values;
 };

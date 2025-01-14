@@ -1,3 +1,4 @@
+#include "SDL2/SDL.h"
 #include <Chip-8.h>
 #include <filesystem>
 #include <fstream>
@@ -9,6 +10,7 @@
 using namespace std;
 
 void Chip8::init() {
+
   // clear display
   for (int i = 0; i < 4096; i++) {
     memory[i] = 0;
@@ -77,7 +79,7 @@ string hexToBinary(unsigned char hex) {
   return binary;
 }
 
-void Chip8::fakeDisplay() {
+std::vector<char> Chip8::fakeDisplay() {
   for (int j = 0; j < 32; j++) {
     for (int i = 0; i < 64; ++i) {
       std::cout << gfx_values[(j * 64) + i];
@@ -86,6 +88,8 @@ void Chip8::fakeDisplay() {
   }
 
   drawFlag = false;
+
+  return gfx_values;
 };
 
 void Chip8::fillDisplaybuffer(int x, int y, int n) {
@@ -100,7 +104,7 @@ void Chip8::fillDisplaybuffer(int x, int y, int n) {
   for (int i = 0; i < n; i++) {
     // gfx[V[x]][V[y] + i] = memory[I + i];
     gfx[(V[x] * V[y]) + (i * 64)] = memory[I + i];
-    for (int k = 0; k < 7; k++) {
+    for (int k = 0; k < 8; k++) {
       gfx_values[(V[x] + (64 * V[y])) + (i * 64) + k] =
           hexToBinary(memory[I + i])[k];
     }
@@ -152,6 +156,10 @@ void Chip8::decode() {
       printf("don't know shit man\n");
       break;
     }
+    break;
+  case 0x1000:
+    printf("Jump to location nnn.\n");
+    pc = opcode & 0x0FFF;
     break;
   default:
     printf("opcode not implemented yet\n");
